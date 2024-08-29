@@ -1,4 +1,5 @@
 using System.Text.Json;
+
 using Core.Entities;
 
 namespace Infrastructure.Data;

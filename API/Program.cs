@@ -1,5 +1,7 @@
 using Core.Interfaces;
+
 using Infrastructure.Data;
+
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,7 +22,8 @@ var app = builder.Build();
 
 app.MapControllers();
 
-try {
+try
+{
     using var scope = app.Services.CreateScope();
 
     var context = scope.ServiceProvider.GetRequiredService<StoreContext>();
@@ -28,7 +31,9 @@ try {
     await context.Database.MigrateAsync();
     await context.SeedAsync();
 
-} catch (Exception ex) {
+}
+catch (Exception ex)
+{
     Console.WriteLine(ex);
 
     throw;

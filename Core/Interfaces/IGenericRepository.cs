@@ -1,4 +1,3 @@
-using System;
 using Core.Entities;
 
 namespace Core.Interfaces;
@@ -15,5 +14,5 @@ public interface IGenericRepository<T> where T : BaseEntity
     void Delete(T entity);
     Task<bool> SaveAllAsync();
     Task<bool> ExistsAsync(int id);
-
+    Task<int> CountAsync(ISpecification<T> spec);
 }
