@@ -1,5 +1,6 @@
 import { CurrencyPipe } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 import { MatButton } from '@angular/material/button';
 import {
@@ -21,6 +22,7 @@ import { MatIcon } from '@angular/material/icon';
     MatCardActions,
     MatCardContent,
     MatIcon,
+    RouterLink,
   ],
   templateUrl: './product-item.component.html',
   styleUrl: './product-item.component.scss',

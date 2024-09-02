@@ -16,6 +16,10 @@ export class ShopService {
 
   constructor(private readonly http: HttpClient) {}
 
+  getProduct(id: number) {
+    return this.http.get<Product>(`${ShopService.BASE_URL}/products/${id}`);
+  }
+
   getProducts({
     brands,
     types,
