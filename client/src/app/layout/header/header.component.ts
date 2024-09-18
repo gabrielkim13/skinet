@@ -7,6 +7,7 @@ import { MatIcon } from '@angular/material/icon';
 import { MatProgressBar } from '@angular/material/progress-bar';
 
 import { BusyService } from '../../core/services/busy.service';
+import { CartService } from '../../core/services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -23,5 +24,8 @@ import { BusyService } from '../../core/services/busy.service';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-  constructor(public readonly busyService: BusyService) {}
+  constructor(
+    public readonly busyService: BusyService,
+    public readonly cartService: CartService
+  ) {}
 }

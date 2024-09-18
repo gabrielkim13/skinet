@@ -1,6 +1,8 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+import { environment } from '../../../environments/environment';
+
 import { Pagination } from '../../shared/models/pagination';
 import { Product } from '../../shared/models/product';
 import { ShopParams } from '../../shared/models/shopParams';
@@ -9,7 +11,7 @@ import { ShopParams } from '../../shared/models/shopParams';
   providedIn: 'root',
 })
 export class ShopService {
-  private static readonly BASE_URL = 'https://localhost:5001/api';
+  private static readonly BASE_URL = environment.apiUrl;
 
   brands: string[] = [];
   types: string[] = [];

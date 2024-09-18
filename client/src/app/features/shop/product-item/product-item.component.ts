@@ -8,9 +8,11 @@ import {
   MatCardActions,
   MatCardContent,
 } from '@angular/material/card';
+import { MatIcon } from '@angular/material/icon';
+
+import { CartService } from '../../../core/services/cart.service';
 
 import { Product } from '../../../shared/models/product';
-import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-product-item',
@@ -30,4 +32,6 @@ import { MatIcon } from '@angular/material/icon';
 export class ProductItemComponent {
   @Input()
   product?: Product;
+
+  constructor(public readonly cartService: CartService) {}
 }
